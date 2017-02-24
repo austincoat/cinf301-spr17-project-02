@@ -1,11 +1,9 @@
 <?php
-require_once('vendor/autoload.php');
+require_once __DIR__ . ('/../../vendor/autoload.php');
+require_once __DIR__ . ('/../../vendor/j7mbo/twitter-api-php/TwitterAPIExchange.php');
 
-class twitterAPI
-{
 
-  function __construct()
-  {
+
   $settings = array(
     'o  auth_access_token' => "311741741-cYBfxFIooBZaf07vSkeqACfEFW8IMybVq585j202",
     'oauth_access_token_secret' => "lfHFl4pyh9zASrtWABe3JPti3z6ttdZMzUunOS3b8SruE",
@@ -18,21 +16,16 @@ $postfields = array(
     'skip_status' => '1'
 );
 
-$twitter = new TwitterAPIExchange($settings);
-echo $twitter->buildOauth($url, $requestMethod)
-    ->setPostfields($postfields)
-    ->performRequest();
-
 $url = 'https://api.twitter.com/1.1/followers/ids.json';
 $getfield = '?screen_name=J7mbo';
 $requestMethod = 'GET';
 
-$twitter1 = new TwitterAPIExchange($settings);
+$twitter = new TwitterAPIExchange($settings);
 echo $twitter->setGetfield($getfield)
     ->buildOauth($url, $requestMethod)
     ->performRequest();
-  }
-}
+
+
 
 
 ?>
