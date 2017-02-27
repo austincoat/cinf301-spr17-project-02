@@ -28,8 +28,7 @@ class twitterAPI
 
       foreach ($json as $field)
       {
-        $tweets[] = $field["user"]["name"]."\n\n";
-        $tweets[] = $field["text"]."\n";
+        $tweets[] = $field["user"]["name"]."\n\n ".$field["text"]."\n";
       }
 
       return $tweets;
