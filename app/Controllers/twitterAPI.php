@@ -15,7 +15,7 @@ class twitterAPI
 
 
     $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-    $getfield = '?screen_name=AustinCoates1&count=5';
+    $getfield = '?screen_name=AustinCoates1&count=10';
     $requestMethod = 'GET';
 
     $twitter = new TwitterAPIExchange($settings);
@@ -24,14 +24,12 @@ class twitterAPI
       ->performRequest();
 
       $json = json_decode($str, true);
-      $tweets = array();
 
       foreach ($json as $field)
       {
-        $tweets[] = $field["user"]["name"]."\n\n ".$field["text"]."\n";
+        echo "<br></br>".$field["user"]["name"]."<br></br>\n\n ".$field["text"]."\n";
       }
 
-      return $tweets;
     }
 
 }

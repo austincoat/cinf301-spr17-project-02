@@ -22,22 +22,27 @@
             </div>
           </nav>
           <?php
-           require "../../app/Controllers/twitterAPI.php";
+           require("../../app/Controllers/twitterAPI.php");
           ?>
 
     </head>
 
+
     <body>
-
-        <p><?php
-              $tweets= new twitterAPI;
-              $posts = array();
-              $posts = $tweets->twitterPosts();
-              ?>
-            </p>
-
-
-      </body>
+      <div class = "container">
+        <div class="row valign-wrapper">
+          <div class="col s6 offset-s3 valign">
+            <div class="card cyan lighten-2">
+              <div class="card-content white-text">
+                <span class="card-title">Feed</span>
+                <p><?php $tweets= new twitterAPI; echo $tweets->twitterPosts();?></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dive>
+        </container>
+    </body>
 
       <footer>
 
