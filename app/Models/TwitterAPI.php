@@ -1,8 +1,6 @@
 <?php
-require_once __DIR__ . ('/../../vendor/autoload.php');
-require_once __DIR__ . ('/../../vendor/j7mbo/twitter-api-php/TwitterAPIExchange.php');
-
-class twitterAPI
+namespace App\Models;
+class TwitterAPI
 {
   function twitterPosts()
   {
@@ -18,7 +16,7 @@ class twitterAPI
     $getfield = '?screen_name=AustinCoates1&count=10';
     $requestMethod = 'GET';
 
-    $twitter = new TwitterAPIExchange($settings);
+    $twitter = new \TwitterAPIExchange($settings);
     $str = $twitter->setGetfield($getfield)
       ->buildOauth($url, $requestMethod)
       ->performRequest();
