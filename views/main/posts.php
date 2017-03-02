@@ -1,15 +1,20 @@
-      <?php
-       use App\Models\TwitterAPI as TwitterAPI;
-      ?>
-      <div class = "container">
-        <div class="row valign-wrapper">
-          <div class="col s6 offset-s3 valign">
-            <div class="card cyan lighten-2">
-              <div class="card-content white-text">
-                <span class="card-title">Feed</span>
-                <p><?php $tweets= new TwitterAPI; $tweets->twitterPosts();?></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<?php
+ use App\Models\TwitterAPI as TwitterAPI;
+ session_start();
+ $_SESSION['posts']="AustinCoates1";
+ $tweets= new TwitterAPI()
+?>
+<form action= "?controller=main&action=posts"methods="get">
+  <div class="row">
+    <div class="input-field col s6 offset-s3 valign">
+      <input value="AustinCoates1" id="user_timeline" type="text" class="validate">
+      <label class="active" for="user_timeline">UserID</label>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Search
+          <i class="material-icons right">send</i>
+        </button>
+    </div>
+  </div>
+</form>
+          <p><?php
+            $tweets->twitterPosts($_GET["user_timeline"]);
+          ?></p>

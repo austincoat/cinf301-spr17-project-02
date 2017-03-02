@@ -12,16 +12,12 @@ class MainController
 {
     public function home()
     {
-
         $view = new Renderer('views/main/');
-        $view->title = $title;
         $view->render('home.php');
     }
     public function posts()
     {
-
         $view = new Renderer('views/main/');
-        $view->title = $title;
         $view->render('posts.php');
     }
     public function error()
