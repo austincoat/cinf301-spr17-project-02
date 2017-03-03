@@ -10,7 +10,7 @@
     }
     $controller->{ $action }();
   }
-  $controllers = array('main' => ['home','posts', 'error']);
+  $controllers = array('main' => ['home','posts','HashTags', 'error']);
   if (array_key_exists($controller, $controllers))
   {
     if (in_array($action, $controllers[$controller]))

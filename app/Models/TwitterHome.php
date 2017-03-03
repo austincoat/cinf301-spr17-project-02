@@ -1,8 +1,8 @@
 <?php
 namespace App\Models;
-class TwitterAPI
+class TwitterHome
 {
-  function twitterPosts($user_name)
+  function twitterTimeLine()
   {
     $settings = array(
     'oauth_access_token' => "311741741-cYBfxFIooBZaf07vSkeqACfEFW8IMybVq585j202",
@@ -10,14 +10,15 @@ class TwitterAPI
     'consumer_key' => "oPQ1szUuO4Uc7Hdta69BMqMLn",
     'consumer_secret' =>"eiGuqGkOZ3QqQHybGEjH8YbBFIRV8oroUaNWBV50FzvZrAksSF"
     );
-    $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-    $getfield = "?screen_name=$user_name&count=10";
+    $url = 'https://api.twitter.com/1.1/statuses/home_timeline.json';
+    $getfield = "?screen_name=AustinCoates1&count=20";
     $requestMethod = 'GET';
     $twitter = new \TwitterAPIExchange($settings);
     $str = $twitter->setGetfield($getfield)
       ->buildOauth($url, $requestMethod)
       ->performRequest();
       $json = json_decode($str, true);
+      $IMAGEURL;
       foreach ($json as $field)
       {
         $IMAGEURL = $field["user"]["profile_image_url_https"];
@@ -29,7 +30,7 @@ class TwitterAPI
               echo "</div>
               <div class='card-stacked'>
                 <div class='card-content'>";
-        echo "<br></br><h5>".$field["user"]["name"]."</h5>\n\n ".$field["text"]."\n";
+        echo "<h5>".$field["user"]["name"]."</h5>\n\n".$field["text"]."\n";
         echo "        </div>
                     </div>
                   </div>

@@ -20,6 +20,11 @@ class MainController
         $view = new Renderer('views/main/');
         $view->render('posts.php');
     }
+    public function HashTags()
+    {
+        $view = new Renderer('views/main/');
+        $view->render('HashTags.php');
+    }
     public function error()
     {
         $view = new Renderer('views/main/');

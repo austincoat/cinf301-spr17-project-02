@@ -7,7 +7,9 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controllers\\MainController' => $baseDir . '/app/Controllers/MainController.php',
+    'App\\Models\\HashTags' => $baseDir . '/app/Models/HashTags.php',
     'App\\Models\\TwitterAPI' => $baseDir . '/app/Models/TwitterAPI.php',
+    'App\\Models\\TwitterHome' => $baseDir . '/app/Models/TwitterHome.php',
     'App\\Renderer' => $baseDir . '/app/Renderer.php',
     'Monolog\\Formatter\\FormatterInterface' => $vendorDir . '/monolog/monolog/src/Monolog/Formatter/FormatterInterface.php',
     'Monolog\\Formatter\\JsonFormatter' => $vendorDir . '/monolog/monolog/src/Monolog/Formatter/JsonFormatter.php',

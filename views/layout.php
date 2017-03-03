@@ -13,12 +13,13 @@
 </head>
   <body>
     <nav>
-      <div class="nav-wrapper cyan lighten-2">
+      <div class="nav-wrapper cyan lighten-1">
         <a href="#!" class="brand-logo center">Twitter RM</a>
         <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="/cinf301-spr17-project-02/?controller=main&action=home">Home</a></li>
             <li><a href="/cinf301-spr17-project-02/?controller=main&action=posts">Posts</a></li>
+            <li><a href="/cinf301-spr17-project-02/?controller=main&action=HashTags">HashTags</a></li>
             </ul>
             <ul class="side-nav" id="mobile">
               <li><a href="/cinf301-spr17-project-02/?controller=main&action=home">Home</a></li>
