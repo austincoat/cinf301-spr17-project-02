@@ -1,8 +1,9 @@
 <?php
  use App\Models\TwitterAPI as TwitterAPI;
- session_start();
  $tweets= new TwitterAPI()
 ?>
+
+
 <form method="get">
   <div class="row">
     <div class="input-field col s6 offset-s3 valign">

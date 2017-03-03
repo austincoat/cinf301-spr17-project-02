@@ -2,12 +2,12 @@
 namespace App\Models;
 class TwitterAPI
 {
-  function twitterPosts()
-  {
-      session_start();
 
-      $json = $_SESSION['posts'];
-      foreach ($json as $field)
+  public function twitterPosts()
+  {
+
+
+      foreach ($_SESSION['posts'] as $field)
       {
         $IMAGEURL = $field["user"]["profile_image_url_https"];
         echo "<div class = 'row valign-wrapper' >

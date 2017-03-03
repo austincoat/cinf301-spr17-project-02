@@ -8,7 +8,7 @@ class HashTags
   }
   function twitterHashs()
   {
-      session_start();
+
       $json = $_SESSION['hashdata'];
       $elementCount  = count($json["statuses"]);
       $i = 0;

@@ -13,7 +13,7 @@ class PostController
 
   public function postit()
   {
-      session_start();
+
       $view = new Renderer('views/main/');
       $settings = array(
       'oauth_access_token' => "311741741-cYBfxFIooBZaf07vSkeqACfEFW8IMybVq585j202",
@@ -28,8 +28,9 @@ class PostController
       $str = $twitter->setGetfield($getfield)
         ->buildOauth($url, $requestMethod)
         ->performRequest();
+
         $json = json_decode($str, true);
-        $_SESSION('posts') = $json;
+        $_SESSION['posts'] = $json;
       $view->render('posts.php');
   }
   public function error()
@@ -39,4 +40,3 @@ class PostController
   }
 
 }
-?>

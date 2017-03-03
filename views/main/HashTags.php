@@ -1,6 +1,5 @@
 <?php
  use App\Models\HashTags as HashTags;
- session_start();
  $tweets= new HashTags();
 ?>
 <form action= "?controller=hash&action=HashTags"methods="get">

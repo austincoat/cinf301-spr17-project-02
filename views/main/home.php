@@ -1,6 +1,5 @@
 <?php
  use App\Models\TwitterHome as TwitterHome;
- session_start();
  $tweets= new TwitterHome()
 ?>
 

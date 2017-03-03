@@ -12,12 +12,11 @@
       break;
       case 'hash':
         $controller = new App\Controllers\HashController();
-      break;
     }
     $controller->{ $action }();
   }
-  $controllers = array('main' => ['home','error'],
-                       'post' => ['postit','error'],
+  $controllers = array('main' => ['home', 'error'],
+                       'post' => ['postit', 'error'],
                        'hash' => ['HashTags', 'error']);
   if (array_key_exists($controller, $controllers))
   {

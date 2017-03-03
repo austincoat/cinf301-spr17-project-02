@@ -12,7 +12,7 @@ class HashController
 {
 public function HashTags()
 {
-    session_start();
+
     $view = new Renderer('views/main/');
     $settings = array(
     'oauth_access_token' => "311741741-cYBfxFIooBZaf07vSkeqACfEFW8IMybVq585j202",
