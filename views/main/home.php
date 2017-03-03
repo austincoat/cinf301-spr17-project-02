@@ -1,6 +1,6 @@
 <?php
  use App\Models\TwitterHome as TwitterHome;
- $tweets= new TwitterHome()
+ $tweets= new TwitterHome();
 ?>
 
 <div class = 'container'>

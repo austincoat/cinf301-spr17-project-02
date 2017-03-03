@@ -13,7 +13,7 @@ class MainController
 
     public function home()
     {
-        
+
         $view = new Renderer('views/main/');
         $settings = array(
         'oauth_access_token' => "311741741-cYBfxFIooBZaf07vSkeqACfEFW8IMybVq585j202",
@@ -31,6 +31,11 @@ class MainController
           $json = json_decode($str, true);
           $_SESSION['home']=$json;
         $view->render('home.php');
+    }
+    public function followers()
+    {
+      $view = new Renderer('views/main/');
+      $view->render('followers.php');
     }
 
     public function error()

@@ -15,7 +15,7 @@
     }
     $controller->{ $action }();
   }
-  $controllers = array('main' => ['home', 'error'],
+  $controllers = array('main' => ['home', 'followers', 'error'],
                        'post' => ['postit', 'error'],
                        'hash' => ['HashTags', 'error']);
   if (array_key_exists($controller, $controllers))

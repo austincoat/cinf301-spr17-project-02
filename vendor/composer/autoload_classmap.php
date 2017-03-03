@@ -6,7 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controllers\\HashController' => $baseDir . '/app/Controllers/HashController.php',
     'App\\Controllers\\MainController' => $baseDir . '/app/Controllers/MainController.php',
+    'App\\Controllers\\PostController' => $baseDir . '/app/Controllers/PostController.php',
     'App\\Models\\HashTags' => $baseDir . '/app/Models/HashTags.php',
     'App\\Models\\TwitterAPI' => $baseDir . '/app/Models/TwitterAPI.php',
     'App\\Models\\TwitterHome' => $baseDir . '/app/Models/TwitterHome.php',
