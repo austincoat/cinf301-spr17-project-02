@@ -18,15 +18,13 @@
         <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="/cinf301-spr17-project-02/?controller=main&action=home">Home</a></li>
-            <li><a href="/cinf301-spr17-project-02/?controller=main&action=posts">Posts</a></li>
-            <li><a href="/cinf301-spr17-project-02/?controller=main&action=HashTags">HashTags</a></li>
-            </ul>
-            <ul class="side-nav" id="mobile">
-              <li><a href="/cinf301-spr17-project-02/?controller=main&action=home">Home</a></li>
-              <li><a href="/cinf301-spr17-project-02/?controller=main&action=posts">Posts</a></li>
+            <li><a href="/cinf301-spr17-project-02/?controller=post&action=postit">Posts</a></li>
+            <li><a href="/cinf301-spr17-project-02/?controller=hash&action=HashTags">HashTags</a></li>
             </ul>
         </div>
       </nav>
-	    <?php require_once('routes.php'); ?>
+	    <?php
+      session_start();
+      require_once('routes.php'); ?>
   <body>
 <html>

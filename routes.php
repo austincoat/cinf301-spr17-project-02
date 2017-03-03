@@ -7,10 +7,18 @@
       case 'main':
         $controller = new App\Controllers\MainController();
       break;
+      case 'post':
+        $controller = new App\Controllers\PostController();
+      break;
+      case 'hash':
+        $controller = new App\Controllers\HashController();
+      break;
     }
     $controller->{ $action }();
   }
-  $controllers = array('main' => ['home','posts','HashTags', 'error']);
+  $controllers = array('main' => ['home','error'],
+                       'post' => ['postit','error'],
+                       'hash' => ['HashTags', 'error']);
   if (array_key_exists($controller, $controllers))
   {
     if (in_array($action, $controllers[$controller]))
