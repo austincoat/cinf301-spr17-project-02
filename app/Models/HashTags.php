@@ -1,14 +1,16 @@
 <?php
 namespace App\Models;
+/**
+ * This class is used to parse through the JSON from the HashController.php
+ * and puts them neatly on their own personal card.
+ *
+ *  @author austincoat
+ */
 class HashTags
 {
-  function __construct()
-  {
-    $_SESSION['hashit']="#POTUS";
-  }
+
   function twitterHashs()
   {
-
       $json = $_SESSION['hashdata'];
       $elementCount  = count($json["statuses"]);
       $i = 0;

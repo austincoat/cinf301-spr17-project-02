@@ -3,9 +3,9 @@ namespace App\Controllers;
 use App\Renderer as Renderer;
 /**
  * MainController class that provides the main view home page
- * for the application.
+ * for the twitter application, showing your actual homefeed.
  *
- * @author dplante
+ * @author dplante && Austincoat
  *
  */
 class MainController
@@ -31,11 +31,6 @@ class MainController
           $json = json_decode($str, true);
           $_SESSION['home']=$json;
         $view->render('home.php');
-    }
-    public function followers()
-    {
-      $view = new Renderer('views/main/');
-      $view->render('followers.php');
     }
 
     public function error()

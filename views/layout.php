@@ -1,3 +1,8 @@
+<?php/*
+ * This class is just to setup the header and footers for each web pages.
+ *
+ *  @author austincoat
+ */ ?>
 <DOCTYPE html>
 <html>
 <head>
@@ -20,7 +25,7 @@
             <li><a href="/cinf301-spr17-project-02/?controller=main&action=home">Home</a></li>
             <li><a href="/cinf301-spr17-project-02/?controller=post&action=postit">Posts</a></li>
             <li><a href="/cinf301-spr17-project-02/?controller=hash&action=HashTags">HashTags</a></li>
-            <li><a href="/cinf301-spr17-project-02/?controller=main&action=followers">Followers</a></li>
+            <li><a href="/cinf301-spr17-project-02/?controller=follow&action=followers">Followers</a></li>
             </ul>
         </div>
       </nav>

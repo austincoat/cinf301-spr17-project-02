@@ -1,5 +1,11 @@
 <?php
 namespace App\Models;
+/**
+ * This class is used to parse through the JSON from the PostController.php
+ * and puts them neatly on their own personal card.
+ *
+ *  @author austincoat
+ */
 class TwitterAPI
 {
 

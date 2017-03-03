@@ -2,17 +2,16 @@
 namespace App\Controllers;
 use App\Renderer as Renderer;
 /**
- * MainController class that provides the main view home page
- * for the application.
+ * Hash Controller, used to render the view and access the global information
+ * given from the form in HashTags.php to display related topics. 
  *
- * @author dplante
- *
+ *  @author austincoat
  */
 class HashController
 {
 public function HashTags()
 {
-
+    $_SESSION["hashman"] = $_GET["hashit"];
     $view = new Renderer('views/main/');
     $settings = array(
     'oauth_access_token' => "311741741-cYBfxFIooBZaf07vSkeqACfEFW8IMybVq585j202",
@@ -21,7 +20,7 @@ public function HashTags()
     'consumer_secret' =>"eiGuqGkOZ3QqQHybGEjH8YbBFIRV8oroUaNWBV50FzvZrAksSF"
     );
     $url = 'https://api.twitter.com/1.1/search/tweets.json';
-    $getfield = "?q=#POTUS&count=10&result_type=recent";
+    $getfield = "?q=". $_SESSION["hashman"] ."&count=10&result_type=recent";
     $requestMethod = 'GET';
     $twitter = new \TwitterAPIExchange($settings);
     $str = $twitter->setGetfield($getfield)

@@ -35,11 +35,13 @@ class ComposerStaticInit77d2aaf0e18bff8d1f227ba077ceede2
     );
 
     public static $classMap = array (
+        'App\\Controllers\\FollowersController' => __DIR__ . '/../..' . '/app/Controllers/FollowersController.php',
         'App\\Controllers\\HashController' => __DIR__ . '/../..' . '/app/Controllers/HashController.php',
         'App\\Controllers\\MainController' => __DIR__ . '/../..' . '/app/Controllers/MainController.php',
         'App\\Controllers\\PostController' => __DIR__ . '/../..' . '/app/Controllers/PostController.php',
         'App\\Models\\HashTags' => __DIR__ . '/../..' . '/app/Models/HashTags.php',
         'App\\Models\\TwitterAPI' => __DIR__ . '/../..' . '/app/Models/TwitterAPI.php',
+        'App\\Models\\TwitterFollowers' => __DIR__ . '/../..' . '/app/Models/TwitterFollowers.php',
         'App\\Models\\TwitterHome' => __DIR__ . '/../..' . '/app/Models/TwitterHome.php',
         'App\\Renderer' => __DIR__ . '/../..' . '/app/Renderer.php',
         'Monolog\\Formatter\\FormatterInterface' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/FormatterInterface.php',

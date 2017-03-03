@@ -2,18 +2,17 @@
 namespace App\Controllers;
 use App\Renderer as Renderer;
 /**
- * MainController class that provides the main view home page
- * for the application.
+ * Post Controller, used to render the view and access the global information
+ * given from the form in posts.php to display all of searched users posts.
  *
- * @author dplante
- *
+ *  @author austincoat
  */
 class PostController
 {
 
   public function postit()
   {
-
+      $_SESSION["user_needed"] = $_GET["user_timeline"];
       $view = new Renderer('views/main/');
       $settings = array(
       'oauth_access_token' => "311741741-cYBfxFIooBZaf07vSkeqACfEFW8IMybVq585j202",
@@ -22,7 +21,7 @@ class PostController
       'consumer_secret' =>"eiGuqGkOZ3QqQHybGEjH8YbBFIRV8oroUaNWBV50FzvZrAksSF"
       );
       $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-      $getfield = "?screen_name=AustinCoates1&count=10";
+      $getfield = "?screen_name=" . $_SESSION["user_needed"] ."&count=10";
       $requestMethod = 'GET';
       $twitter = new \TwitterAPIExchange($settings);
       $str = $twitter->setGetfield($getfield)

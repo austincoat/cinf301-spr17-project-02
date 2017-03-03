@@ -1,6 +1,12 @@
 <?php
  use App\Models\TwitterHome as TwitterHome;
  $tweets= new TwitterHome();
+ /*
+  * This class is setting up the welcome card,
+  * and calling the function to pull out the data.
+  *
+  *  @author austincoat
+  */
 ?>
 
 <div class = 'container'>

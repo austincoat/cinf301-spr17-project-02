@@ -12,12 +12,17 @@
       break;
       case 'hash':
         $controller = new App\Controllers\HashController();
+      break;
+      case 'follow':
+        $controller = new App\Controllers\FollowersController();
+      break;
     }
     $controller->{ $action }();
   }
-  $controllers = array('main' => ['home', 'followers', 'error'],
+  $controllers = array('main' => ['home', 'error'],
                        'post' => ['postit', 'error'],
-                       'hash' => ['HashTags', 'error']);
+                       'hash' => ['HashTags', 'error'],
+                       'follow' => ['followers', 'error']);
   if (array_key_exists($controller, $controllers))
   {
     if (in_array($action, $controllers[$controller]))
