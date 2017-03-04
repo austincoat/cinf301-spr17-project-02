@@ -23,13 +23,15 @@ class TwitterHome
               <div class='card-stacked'>
                 <div class='card-content'>";
         echo "<h5>".$field["user"]["name"]."</h5>\n\n".$field["text"]."\n";
-        echo "        </div>
+        echo " 
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>";
+
       }
     }
 }

@@ -32,7 +32,8 @@ class TwitterFollowers
                 </div>
               </div>
             </div>
-          </div>";
+          </div>
+          ";
           $i+=1;
       }
   }

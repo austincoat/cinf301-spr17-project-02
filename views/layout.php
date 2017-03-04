@@ -1,4 +1,6 @@
-<?php/*
+
+<?php
+/*
  * This class is just to setup the header and footers for each web pages.
  *
  *  @author austincoat
@@ -17,6 +19,7 @@
     <script type="text/javascript" src="views/main/js/materialize.min.js"></script>
 </head>
   <body>
+
     <nav>
       <div class="nav-wrapper cyan lighten-1">
         <a href="#!" class="brand-logo center">Twitter RM</a>
@@ -27,8 +30,16 @@
             <li><a href="/cinf301-spr17-project-02/?controller=hash&action=HashTags">HashTags</a></li>
             <li><a href="/cinf301-spr17-project-02/?controller=follow&action=followers">Followers</a></li>
             </ul>
+          <ul id="nav-mobile" class="side-nav">
+            <li><a href="/cinf301-spr17-project-02/?controller=main&action=home">Home</a></li>
+            <li><a href="/cinf301-spr17-project-02/?controller=post&action=postit">Posts</a></li>
+            <li><a href="/cinf301-spr17-project-02/?controller=hash&action=HashTags">HashTags</a></li>
+            <li><a href="/cinf301-spr17-project-02/?controller=follow&action=followers">Followers</a></li>
+          </ul>
         </div>
       </nav>
+
+
 	    <?php
       session_start();
       require_once('routes.php'); ?>
