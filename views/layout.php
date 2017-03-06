@@ -27,13 +27,13 @@
           <ul class="right hide-on-med-and-down">
             <li><a href="/cinf301-spr17-project-02/?controller=main&action=home">Home</a></li>
             <li><a href="/cinf301-spr17-project-02/?controller=post&action=postit">Posts</a></li>
-            <li><a href="/cinf301-spr17-project-02/?controller=hash&action=HashTags">HashTags</a></li>
+            <li><a href="/cinf301-spr17-project-02/?controller=hash&action=HashTags">HashTags And Recent Phrases</a></li>
             <li><a href="/cinf301-spr17-project-02/?controller=follow&action=followers">Followers</a></li>
             </ul>
           <ul id="nav-mobile" class="side-nav">
             <li><a href="/cinf301-spr17-project-02/?controller=main&action=home">Home</a></li>
             <li><a href="/cinf301-spr17-project-02/?controller=post&action=postit">Posts</a></li>
-            <li><a href="/cinf301-spr17-project-02/?controller=hash&action=HashTags">HashTags</a></li>
+            <li><a href="/cinf301-spr17-project-02/?controller=hash&action=HashTags">HashTags And Recent Phrases</a></li>
             <li><a href="/cinf301-spr17-project-02/?controller=follow&action=followers">Followers</a></li>
           </ul>
         </div>

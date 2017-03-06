@@ -15,7 +15,7 @@
       <div class='card blue dark-2'>
         <div class='card-content white-text'>
           <p>Search up seperate HashTags, to see what people are talking about each topic.<br></br>
-            Examples #Dog, #LOL, #POTUS
+            Examples #Dog, #LOL, #POTUS<br></br> Or, just type in any word or phrase without a # to display recent tweets with that corresponding phrase.
           </p>
         </div>
       </div>
